@@ -13,6 +13,7 @@
 	bottom: 0;
 	width: 210px;
 	background: white;
+	z-index: 999;
 }
 
 .menu-links{
@@ -47,4 +48,5 @@
 	background-color: transparent;
 	color: black;
 	cursor: pointer;
+	z-index: 999;
 }

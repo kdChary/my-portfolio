@@ -1,0 +1,22 @@
+.hero{
+	height: calc(100vh - 10vh);
+	background: linear-gradient(180deg, #0c0c1d, #111132);
+	overflow: hidden;
+	position: relative;
+}
+
+.hero>.wrapper{
+	border: solid 1px #3f5;
+	max-width: 1060px;
+}
+
+.img-container{
+	height: 100%;
+	width: auto;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.img-container>img{
+	height: 100%;
+}
