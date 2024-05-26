@@ -56,10 +56,11 @@
 }
 .services-title>.title>img{
 	width: 300px;
-	height: 100px;
+	height: 115px;
 	border: none;
 	border-radius: 50px;
-	object-fit: cover;
+	object-fit: fill;
+	object-position: center;
 }
 .services-list{
 	flex: 2;
