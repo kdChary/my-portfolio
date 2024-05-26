@@ -5,10 +5,11 @@ import Hero from './components/Hero';
 import Parallax from './components/parallax';
 import Services from './components/myServices';
 import Projects from './components/projects';
+import Contacts from './components/contacts';
 
 const App = () => {
-  return (
-		<div>
+	return (
+		<main>
 			<section id="HomePage">
 				<Navbar />
 				<Hero />
@@ -28,9 +29,9 @@ const App = () => {
 				<Parallax type="Projects" />
 			</section>
 			<Projects />
-			<section id="Contact">contact</section>
-		</div>
+			<Contacts id="Contact" />
+		</main>
 	);
-}
+};
 
 export default App
