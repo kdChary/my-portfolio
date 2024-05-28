@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 
@@ -20,25 +20,33 @@ const variants = {
 };
 
 function Contacts() {
+	const [msg, setMsg] = useState({ msgText: '', isErr: false });
 	const ref = useRef();
 	const formRef = useRef();
-
+	// console.log(msg);
+	// const m = {...msg,m1:'val'}
+	// console.log(m,1)
 	const sendEmail = (e) => {
-    e.preventDefault();
+		e.preventDefault();
 
-    emailjs
-      .sendForm('service_ck40gr1', 'template_676c2cc', formRef.current, {
-        publicKey: 'q3oWTxizhuhBGF0K5',
-      })
-      .then(
-        () => {
-          console.log('SUCCESS!');
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-        },
-      );
-  };
+		emailjs
+			.sendForm('service_eaa8jhq', 'template_676c2cc', formRef.current, {
+				publicKey: 'q3oWTxizhuhBGF0K5',
+			})
+			.then(
+				() => {
+					setMsg({ ...msg, msgText: 'Received ... Thank you 🙏' });
+					console.log('SUCCESS!');
+				},
+				(error) => {
+					setMsg({
+						...msg,
+						msgText: 'Ah 😔! Something went wrong, please email me ',
+					});
+					// console.log('FAILED...', error.text);
+				}
+			);
+	};
 
 	const isInView = useInView(ref, { margin: '-100px' });
 	return (
@@ -72,7 +80,7 @@ function Contacts() {
 					initial={{ opacity: 1 }}
 					whileInView={{ opacity: 0 }}
 					transition={{ delay: 3, duration: 1 }}>
-					<svg width="450px" height="450px" viewBox="0 0 32.666 32.666">
+					<svg viewBox="0 0 32.666 32.666">
 						<motion.path
 							strokeWidth={0.2}
 							fill="none"
@@ -101,10 +109,18 @@ function Contacts() {
 					initial={{ opacity: 0 }}
 					whileInView={{ opacity: 1 }}
 					transition={{ delay: 4, duration: 1 }}>
-					<input type="text" required placeholder="Name" name="name"/>
-					<input type="email" required placeholder="Email" name="email"/>
-					<textarea cols={30} rows={8} placeholder="Message" name="message"></textarea>
+					<span>Email Me</span>
+					<input type="text" required placeholder="Name" name="name" />
+					<input type="email" required placeholder="Email" name="email" />
+					<textarea
+						cols={30}
+						rows={8}
+						placeholder="Message"
+						name="message"></textarea>
 					<button type="submit">Send</button>
+					{msg.msgText.length !== 0 ? (
+						<p className={msg.isErr ? 'error' : 'msg'}>{msg.msgText}</p>
+					) : null}
 				</motion.form>
 			</motion.div>
 		</motion.div>

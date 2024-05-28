@@ -25,6 +25,9 @@
 	position: relative;
 }
 .phone-svg{
+	width: 450px;
+	height: 450px;
+	/* width="450px" height="450px" */
 	position: absolute;
 	stroke: orange;
 	margin: auto;
@@ -57,4 +60,39 @@
 	border-radius: 10px;
 	cursor: pointer;
 	font-weight: 600;
+	margin-bottom: -5px;
+}
+.error{
+	color: #f44440;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.msg{
+	font-family: Roboto, 'Arial Narrow', Arial, sans-serif;
+	color: #1f3;
+}
+@media screen and (max-width: 767px){
+	.contacts{
+		flex-direction: column;
+		align-items: center;
+	}
+	.contact-details{
+		align-self: center;
+		text-align: center;
+		font-family: 'Haettenschweiler', 'Arial Narrow Bold',;
+
+		h1{
+			font-size: 24px;
+		}
+		span{
+			font-size: 15px;
+			font-style: italic;
+		}
+	}
+
+	.phone-svg{
+		width: 180px;
+		height: 180px;
+		top: 20%;
+		left: 13%;
+	}
 }

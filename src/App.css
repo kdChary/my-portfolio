@@ -35,3 +35,6 @@ section{
   scroll-snap-align: center;
   overflow: hidden;
 }
+#Contact{
+  height: auto;
+}
