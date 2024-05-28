@@ -23,9 +23,7 @@ function Contacts() {
 	const [msg, setMsg] = useState({ msgText: '', isErr: false });
 	const ref = useRef();
 	const formRef = useRef();
-	// console.log(msg);
-	// const m = {...msg,m1:'val'}
-	// console.log(m,1)
+	
 	const sendEmail = (e) => {
 		e.preventDefault();
 
@@ -42,6 +40,7 @@ function Contacts() {
 					setMsg({
 						...msg,
 						msgText: 'Ah 😔! Something went wrong, please email me ',
+						isErr: true,
 					});
 					// console.log('FAILED...', error.text);
 				}
