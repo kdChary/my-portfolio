@@ -7,12 +7,12 @@
 }
 
 .services-text-container{
-	flex: 0.5;
+	font-family: 'Courier New', Courier, monospace;
 	align-self: flex-end;
 	display: flex;
 	align-items: center;
 	gap: 20px;
-	padding-top: 13px;
+	padding: 13px;
 }
 .services-text-container>hr{
 	width: 350px;
@@ -26,14 +26,11 @@
 	text-align: right;
 }
 
-
 .services-title{
-	flex: 1.5;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	/* gap: 30px; */
 }
 .services-title>.title{
 	display: flex;
@@ -63,13 +60,62 @@
 	object-position: center;
 }
 .services-list{
-	flex: 2;
 	list-style-type: none;
 	display: flex;
+	flex-flow: row wrap;
 	max-width: 1080px;
 	margin: auto;
+	border: solid 1px #444;
+	height: 40%;
 }
-.services-list>.box{
-	padding: 20px;
-	border: 0.5px solid gray;
+
+.skill-item{
+	list-style-type: none;
+	width: 98px;
+	height: 98px;
+	border-radius: 5px;
+
+	.skill-img{
+		width: 80%;
+		img{
+			width: 100%;
+			object-fit: contain;
+		}
+}
+}
+@media screen and (max-width: 767px){
+	.services{
+		gap: 23px;
+	}
+	.services-text-container{
+		width: 90%;
+
+		.text-container{
+			width: 100%;
+		}
+
+		hr{
+			width: 45%;
+		}
+
+		p{
+			font-size: 9px;
+			font-family:   'Cartograph CF',ans-serif;
+		}
+	}
+
+	.services-title{
+		.title:last-child{
+			display: none;
+		}
+		.title{
+			flex-direction: column;
+			text-align: center;
+			gap: 0;
+
+			img{
+				width: 290px;
+			}
+		}
+	}
 }

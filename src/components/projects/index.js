@@ -3,6 +3,8 @@ import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 
 import './index.css';
 
+// Add real projects
+
 const items = [
 	{
 		id: 1,
@@ -74,7 +76,7 @@ const Projects = () => {
 	return (
 		<div className="projects-page" ref={ref}>
 			<div className="progress">
-				<h1>My Project Works</h1>
+				<h1>My Projects</h1>
 				<motion.div className="progress-bar" style={{ scaleX }}></motion.div>
 			</div>
 			{items.map((item) => (

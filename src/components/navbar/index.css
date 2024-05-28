@@ -1,8 +1,8 @@
-.navbar{
+.navbar {
 	height: 10vh;
 }
 
-.wrapper{
+.wrapper {
 	height: 100%;
 	max-width: 1080px;
 	margin: auto;
@@ -10,14 +10,45 @@
 	align-items: center;
 	justify-content: space-between;
 
+	span {
+		font-weight: bold;
+	}
+	.social {
+		display: flex;
+		gap: 20px;
+		list-style-type: none;
+
+		.social-icon {
+			width: 30px;
+			height: 30px;
+			cursor: pointer;
+			transition: all 1s ;
+		}
+		.social-icon:hover{
+			transition: (0.175, 0.885, 0.32, 1.275) 1ms;
+			height: 33px;
+			width: 33px;
+		}
+	}
 }
 
-.wrapper>span{
-	font-weight: bold;
-}
 
-.wrapper>.social{
-	display: flex;
-	gap: 20px;
-	list-style-type: none;
+
+@media screen and (max-width: 425px) {
+	.wrapper {
+		align-self: center;
+		width: 90%;
+		span {
+			font-size: 15px;
+		}
+
+		.social {
+			gap: 5px;
+			.social-icon {
+				width: 20px;
+				height: 20px;
+				font-size: 12px;
+			}
+		}
+	}
 }

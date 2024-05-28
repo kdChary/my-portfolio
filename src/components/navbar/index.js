@@ -1,10 +1,8 @@
 import React from 'react';
-import { SocialIcon } from 'react-social-icons';
 import { motion } from 'framer-motion';
 
 import './index.css';
 import Sidebar from '../sidebar';
-const iconSize = { height: 30, width: 30 };
 
 const Navbar = () => {
 	return (
@@ -19,20 +17,36 @@ const Navbar = () => {
 					Siva_Dinesh
 				</motion.span>
 				<ul className="social">
-					<li href="#">
-						<SocialIcon url="www.mail.google.com" style={iconSize} />
+					<li>
+						<img
+							src="https://img.icons8.com/?size=100&id=P7UIlhbpWzZm&format=png&color=000000"
+							alt="gmail"
+							className="social-icon"
+						/>
 					</li>
 
-					<li href="#">
-						<SocialIcon url="www.linkedin.com" style={iconSize} />
+					<li>
+						<img
+							src="https://img.icons8.com/?size=100&id=13963&format=png&color=000000"
+							alt="twitter"
+							className="social-icon"
+						/>
 					</li>
 
-					<li href="#">
-						<SocialIcon url="www.github.com" style={iconSize} />
+					<li>
+						<img
+							src="https://img.icons8.com/?size=100&id=32323&format=png&color=000000"
+							alt="instagram"
+							className="social-icon"
+						/>
 					</li>
 
-					<li href="#">
-						<SocialIcon url="www.instagram.com" style={iconSize} />
+					<li>
+						<img
+							src="https://img.icons8.com/?size=100&id=13930&format=png&color=000000"
+							alt="linkedin"
+							className="social-icon"
+						/>
 					</li>
 				</ul>
 			</div>

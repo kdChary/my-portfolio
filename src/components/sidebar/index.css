@@ -50,3 +50,12 @@
 	cursor: pointer;
 	z-index: 999;
 }
+@media screen and (max-width: 969px){
+	.circle{
+		top: 29px;
+		left: 0;
+	}
+	.side-btn{
+		top: 44px;
+	}
+}
